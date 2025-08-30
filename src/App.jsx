@@ -27,7 +27,7 @@ export default function App() {
         </div>
       </section>
       {/* Search results */}
-      <section className="py-5">
+      <section className="py-5 px-md-5">
         <div className="container">
           <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
             <div className="col">
@@ -56,6 +56,14 @@ export default function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* Footer */}
+      <section className="py-3 bg-body-secondary">
+        <div className="container-fluid">
+          <p className="text-center mb-0">
+            Copyright &copy; 2025 M. Wildan Hafidz. <a href="https://github.com/mwildan-hafidz" class="text-dark">GitHub</a> | All rights reserved.
+          </p>
         </div>
       </section>
     </>
