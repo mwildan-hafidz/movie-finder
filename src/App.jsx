@@ -1,3 +1,5 @@
+import poster from './images/avengers-poster.jpg';
+
 export default function App() {
   return (
     <>
@@ -21,6 +23,38 @@ export default function App() {
           <div className="input-group">
             <input type="text" className="form-control" placeholder="Search for movies" id="search-input" />
             <button className="btn btn-dark" type="button">Search</button>
+          </div>
+        </div>
+      </section>
+      {/* Search results */}
+      <section className="py-5">
+        <div className="container">
+          <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
+            <div className="col">
+              <div className="card">
+                <img src={poster} className="card-img" />
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={poster} className="card-img" />
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={poster} className="card-img" />
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={poster} className="card-img" />
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <img src={poster} className="card-img" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
