@@ -1,6 +1,11 @@
-export default function SearchForm() {
+import { useState } from "react";
+
+export default function SearchForm({ onSearch }) {
+  const [search, setSearch] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    onSearch(search);
   }
 
   return (
@@ -12,6 +17,8 @@ export default function SearchForm() {
             className="form-control"
             placeholder="Search for movies"
             id="search-input"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
           />
           <button className="btn btn-dark" type="submit">Search</button>
         </form>
