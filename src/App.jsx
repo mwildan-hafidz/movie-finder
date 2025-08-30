@@ -1,3 +1,4 @@
+import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import TrendingMovies from './components/TrendingMovies';
 import SearchForm from './components/SearchForm';
@@ -6,12 +7,12 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <>
+    <Wrapper>
       <Navbar />
       <TrendingMovies />
       <SearchForm />
       <SearchResults />
       <Footer />
-    </>
+    </Wrapper>
   )
 }
