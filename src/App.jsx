@@ -1,40 +1,18 @@
-import { useState } from 'react';
 import Wrapper from './components/Wrapper';
 import Navbar from './components/Navbar';
 import TrendingMovies from './components/TrendingMovies';
-import SearchForm from './components/SearchForm';
-import SearchResults from './components/SearchResults';
+import SearchMovies from './components/SearchMovies';
 import Footer from './components/Footer';
-import apiKey from './config';
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSearch = async (search) => {
-    setIsLoading(true);
-
-    const newMovies = await getMovies(search);
-    setMovies(newMovies);
-
-    setIsLoading(false);
-  }
-
   return (
     <Wrapper>
       <Navbar />
       <TrendingMovies />
-      <SearchForm onSearch={handleSearch} />
-      <SearchResults movies={movies} isLoading={isLoading} />
+      <SearchMovies />
       <Footer />
     </Wrapper>
   )
 }
 
 export default App;
-
-function getMovies(name) {
-  return fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${name}`)
-    .then(res => res.json())
-    .then(json => json.Response === "True" ? json.Search : []);
-}
