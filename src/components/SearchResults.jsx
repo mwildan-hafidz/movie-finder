@@ -25,8 +25,8 @@ function Results({ movies }) {
 function Card({ posterURL }) {
   return (
     <div className="col">
-      <div className="card">
-        <img src={posterURL} className="card-img" />
+      <div className="card h-100">
+        <img src={posterURL} className="card-img h-100 object-fit-cover" />
       </div>
     </div>
   );
