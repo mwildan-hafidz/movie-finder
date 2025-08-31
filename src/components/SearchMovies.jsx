@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
-import apiKey from "../config";
+import { getMovies } from "../services/api";
 
 function SearchMovies() {
   const [movies, setMovies] = useState([]);
@@ -10,24 +10,25 @@ function SearchMovies() {
   const handleSearch = async (search) => {
     setIsLoading(true);
 
-    const newMovies = await getMovies(search);
-    setMovies(newMovies);
-
-    setIsLoading(false);
+    try {
+      const newMovies = await getMovies(search);
+      setMovies(newMovies);
+    }
+    catch (err) {
+      console.error("Failed to fetch movies:", err);
+      setMovies([]);
+    }
+    finally {
+      setIsLoading(false);
+    }
   }
 
   return (
     <>
-      <SearchForm onSearch={handleSearch} />
+      <SearchForm onSearch={handleSearch} isLoading={isLoading} />
       <SearchResults movies={movies} isLoading={isLoading} />
     </>
   )
 }
 
 export default SearchMovies;
-
-function getMovies(name) {
-  return fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${name}`)
-    .then(res => res.json())
-    .then(json => json.Response === "True" ? json.Search : []);
-}

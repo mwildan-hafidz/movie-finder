@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-export default function SearchForm({ onSearch }) {
+export default function SearchForm({ onSearch, isLoading }) {
   const [search, setSearch] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!search.trim()) return;
     onSearch(search);
   }
 
@@ -20,7 +21,7 @@ export default function SearchForm({ onSearch }) {
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
-          <button className="btn btn-dark" type="submit">Search</button>
+          <button className="btn btn-dark" type="submit" disabled={isLoading}>Search</button>
         </form>
       </div>
     </section>

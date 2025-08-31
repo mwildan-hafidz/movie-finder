@@ -1,6 +1,4 @@
-import poster from '../images/avengers-poster.jpg';
-
-export default function SearchResults({ movies, isLoading }) {
+function SearchResults({ movies, isLoading }) {
   return (
     <section className="py-5 px-md-5 flex-fill">
       <div className="container">
@@ -10,15 +8,14 @@ export default function SearchResults({ movies, isLoading }) {
   );
 }
 
+export default SearchResults;
+
 function Results({ movies }) {
+  if (movies.length === 0) return <NotFound />;
   return (
-    <>
-      {
-        movies.length === 0 ? <NotFound /> : <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
-          {movies.map(movie => <Card posterURL={movie.Poster} key={movie.imdbID} />)}
-        </div>
-      }
-    </>
+    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
+      {movies.map(movie => <Card posterURL={movie.Poster} key={movie.imdbID} />)}
+    </div>
   )
 }
 
