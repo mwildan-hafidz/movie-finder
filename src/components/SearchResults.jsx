@@ -11,6 +11,7 @@ function SearchResults({ movies, isLoading }) {
 export default SearchResults;
 
 function Results({ movies }) {
+  if (movies === null) return <Welcome />
   if (movies.length === 0) return <NotFound />;
   return (
     <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
@@ -37,10 +38,18 @@ function Spinner() {
   );
 }
 
+function Welcome() {
+  return (
+    <div className="text-center">
+      <p className="lead text-secondary">Search for some movies above! : &#41;</p>
+    </div>
+  )
+}
+
 function NotFound() {
   return (
     <div className="text-center">
-      <h1 className="text-secondary">Not Found!</h1>
+      <p className="lead text-secondary">Not Found! : &#40;</p>
     </div>
   )
 }

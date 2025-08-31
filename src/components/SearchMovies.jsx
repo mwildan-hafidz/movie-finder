@@ -4,7 +4,7 @@ import SearchResults from "./SearchResults";
 import { getMovies } from "../services/api";
 
 function SearchMovies() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSearch = async (search) => {
