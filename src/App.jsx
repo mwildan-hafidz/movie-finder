@@ -9,10 +9,15 @@ import apiKey from './config';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSearch = async (search) => {
+    setIsLoading(true);
+
     const newMovies = await getMovies(search);
     setMovies(newMovies);
+
+    setIsLoading(false);
   }
 
   return (
@@ -20,7 +25,7 @@ function App() {
       <Navbar />
       <TrendingMovies />
       <SearchForm onSearch={handleSearch} />
-      <SearchResults movies={movies} />
+      <SearchResults movies={movies} isLoading={isLoading} />
       <Footer />
     </Wrapper>
   )
