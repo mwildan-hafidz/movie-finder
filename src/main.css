@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item img {
+    height: 320px;
+  }
+}

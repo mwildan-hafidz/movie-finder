@@ -1,4 +1,4 @@
-export default function TrendingMovies() {
+function TrendingMovies() {
   return (
     <section className="py-5 px-3 px-md-5">
       <div className="carousel slide" data-bs-ride="carousel">
@@ -6,12 +6,12 @@ export default function TrendingMovies() {
           <div className="carousel-item active">
             <div className="container">
               <div className="row">
-                <div className="col-6 col-sm-8 col-md-9">
+                <div className="col-6 col-sm-8">
                   <h1 className="display-1">Movie I</h1>
                   <button className="btn btn-dark mt-3">Watch</button>
                 </div>
-                <div className="col-6 col-sm-4 col-md-3">
-                  <img src="https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_SX300.jpg" className="h-100 w-100" />
+                <div className="col-6 col-sm-4">
+                  <img src="https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_SX300.jpg" className="w-100 object-fit-contain" />
                 </div>
               </div>
             </div>
@@ -19,12 +19,12 @@ export default function TrendingMovies() {
           <div className="carousel-item">
             <div className="container">
               <div className="row">
-                <div className="col-6 col-sm-8 col-md-9">
-                  <h1 className="display-1">Movie II</h1>
+                <div className="col-6 col-sm-8">
+                  <h1 className="display-1">Movie I</h1>
                   <button className="btn btn-dark mt-3">Watch</button>
                 </div>
-                <div className="col-6 col-sm-4 col-md-3">
-                  <img src="https://m.media-amazon.com/images/M/MV5BNTBiYWJlMjQtOTIyMy00NTY4LWFhOWItOWZhNzc3NGMyMjc2XkEyXkFqcGc@._V1_SX300.jpg" className="h-100 w-100" />
+                <div className="col-6 col-sm-4">
+                  <img src="https://m.media-amazon.com/images/M/MV5BNTBiYWJlMjQtOTIyMy00NTY4LWFhOWItOWZhNzc3NGMyMjc2XkEyXkFqcGc@._V1_SX300.jpg" className="w-100 object-fit-contain" />
                 </div>
               </div>
             </div>
@@ -34,3 +34,5 @@ export default function TrendingMovies() {
     </section>
   );
 }
+
+export default TrendingMovies;
