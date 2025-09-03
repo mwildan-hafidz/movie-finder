@@ -50,16 +50,16 @@ export default TrendingMovies;
 function TrendingMoviesItem({ movie, index }) {
   return (
     <div className={`carousel-item ${index === 0 && 'active'}`}>
-      <div className="container">
-        <div className="row">
-          <div className="col-6 col-sm-8">
+      <div className="container h-100">
+        <div className="row h-100 flex-nowrap g-3 g-md-5">
+          <div className="col-auto h-100">
+            <img src={movie.poster} className="h-100 rounded border border-light" />
+          </div>
+          <div className="col d-flex flex-column justify-content-center align-items-start">
             <h5 className="text-white d-sm-none">{movie.title}</h5>
             <h3 className="text-white d-none d-sm-block d-md-none">{movie.title}</h3>
             <h1 className="text-white d-none d-md-block">{movie.title}</h1>
-            <button className="btn btn-primary mt-3">Watch</button>
-          </div>
-          <div className="col-6 col-sm-4">
-            <img src={movie.poster} className="w-100 object-fit-contain" />
+            <button className="btn btn-light mt-3">Watch</button>
           </div>
         </div>
       </div>

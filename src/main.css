@@ -1,17 +1,17 @@
 @media (max-width: 768px) {
-  .carousel-item img {
+  .carousel-item {
     height: 240px;
   }
 }
 
 @media (max-width: 320px) {
-  .carousel-item img {
+  .carousel-item {
     height: 180px;
   }
 }
 
 @media (min-width: 768px) {
-  .carousel-item img {
+  .carousel-item {
     height: 320px;
   }
 }
