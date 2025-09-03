@@ -31,7 +31,7 @@ function TrendingMovies() {
   ];
 
   return (
-    <section className="py-5 px-3 px-md-5 bg-dark">
+    <section className="py-5 px-3 px-md-5 mt-5">
       <div className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {trendingMovies.map((movie, index) => {

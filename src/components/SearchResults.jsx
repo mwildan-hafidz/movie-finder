@@ -1,6 +1,6 @@
 function SearchResults({ movies, isLoading }) {
   return (
-    <section className="py-5 px-md-5 flex-fill">
+    <section className="py-5 px-md-5 flex-fill bg-light">
       <div className="container">
         {isLoading ? <Spinner /> : <Results movies={movies} />}
       </div>
