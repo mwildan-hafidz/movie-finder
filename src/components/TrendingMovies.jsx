@@ -31,7 +31,7 @@ function TrendingMovies() {
   ];
 
   return (
-    <section className="py-5 px-3 px-md-5">
+    <section className="py-5 px-3 px-md-5 bg-dark">
       <div className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {trendingMovies.map((movie, index) => {
@@ -53,9 +53,10 @@ function TrendingMoviesItem({ movie, index }) {
       <div className="container">
         <div className="row">
           <div className="col-6 col-sm-8">
-            {/* <h1 className="display-3">{movie.title}</h1> */}
-            <p className="display-6">{movie.title}</p>
-            <button className="btn btn-dark mt-3">Watch</button>
+            <h5 className="text-white d-sm-none">{movie.title}</h5>
+            <h3 className="text-white d-none d-sm-block d-md-none">{movie.title}</h3>
+            <h1 className="text-white d-none d-md-block">{movie.title}</h1>
+            <button className="btn btn-primary mt-3">Watch</button>
           </div>
           <div className="col-6 col-sm-4">
             <img src={movie.poster} className="w-100 object-fit-contain" />
