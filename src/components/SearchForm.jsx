@@ -10,7 +10,7 @@ export default function SearchForm({ onSearch, isLoading }) {
   }
 
   return (
-    <section className="bg-body-secondary py-3 px-md-5">
+    <section className="py-3 px-md-5">
       <div className="container">
         <form className="input-group" id="search-form" onSubmit={handleSubmit}>
           <input
