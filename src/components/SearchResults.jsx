@@ -14,17 +14,21 @@ function Results({ movies }) {
   if (movies === null) return <Welcome />
   if (movies.length === 0) return <NotFound />;
   return (
-    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
-      {movies.map(movie => <Card posterURL={movie.Poster} key={movie.imdbID} />)}
+    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-2">
+      {movies.map(movie => <Card movie={movie} key={movie.imdbID} />)}
     </div>
   )
 }
 
-function Card({ posterURL }) {
+function Card({ movie }) {
   return (
     <div className="col">
       <div className="card h-100">
-        <img src={posterURL} className="card-img h-100 object-fit-cover" />
+        <img src={movie.Poster} className="card-img-top h-100 object-fit-cover" />
+        <div className="card-body position-relative">
+          <h6 className="card-title text-nowrap overflow-x-hidden overflow-x-fade py-1">{movie.Title}</h6>
+          <h6 className="card-subtitle text-body-secondary">{movie.Year}</h6>
+        </div>
       </div>
     </div>
   );
