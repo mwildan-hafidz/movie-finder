@@ -11,7 +11,9 @@ function SearchMovies() {
     setIsLoading(true);
 
     try {
-      const newMovies = await getMovies(search);
+      const newMovies = await fetch(`/api/movies?q=${name}`)
+        .then(res => res.json());
+
       setMovies(newMovies);
     }
     catch (err) {
