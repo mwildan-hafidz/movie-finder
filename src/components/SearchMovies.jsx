@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
-import { getMovies } from "../services/api";
 
 function SearchMovies() {
   const [movies, setMovies] = useState(null);
