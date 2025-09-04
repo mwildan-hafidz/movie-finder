@@ -1,12 +1,22 @@
-# React + Vite
+# 🎬 Movie Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Movie Finder Web App** built with **React** and **Bootstrap 5**.  
+It uses the [OMDb API](https://www.omdbapi.com/) to let users search for movies by title.
 
-Currently, two official plugins are available:
+## 🔧 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Search for movies by title  
+- 🖼️ View movie posters, titles, and release years  
+- 📱 Responsive design powered by Bootstrap  
+- ⚠️ Basic error handling for invalid or empty searches  
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)  
+- [Bootstrap 5](https://getbootstrap.com/)  
+- [OMDb API](https://www.omdbapi.com/)  
+
+## 🚀 Deployment
+
+The app is deployed with [Vercel](https://vercel.com/) for fast and seamless hosting.  
+Every push to the main branch triggers an automatic deployment.  
