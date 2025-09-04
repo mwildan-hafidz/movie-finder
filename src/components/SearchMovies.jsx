@@ -10,7 +10,7 @@ function SearchMovies() {
     setIsLoading(true);
 
     try {
-      const newMovies = await fetch(`/api/movies?q=${name}`)
+      const newMovies = await fetch(`/api/movies?q=${search}`)
         .then(res => res.json());
 
       setMovies(newMovies);
